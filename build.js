@@ -50,7 +50,7 @@ var App = function (_React$Component) {
 
             return React.createElement(
                 "div",
-                null,
+                { className: "div" },
                 React.createElement(
                     "form",
                     { onSubmit: function onSubmit(event) {
@@ -58,10 +58,11 @@ var App = function (_React$Component) {
                         } },
                     React.createElement(
                         "label",
-                        { htmlFor: "searchText" },
+                        { className: "label", htmlFor: "searchText" },
                         "Search by user name"
                     ),
                     React.createElement("input", {
+                        className: "input",
                         type: "text",
                         id: "searchText",
                         onChange: function onChange(event) {
@@ -69,6 +70,7 @@ var App = function (_React$Component) {
                         },
                         value: this.state.searchText })
                 ),
+                React.createElement("p", null),
                 React.createElement(UsersList, { users: this.state.users })
             );
         }
@@ -91,7 +93,7 @@ var UsersList = function (_React$Component2) {
         value: function render() {
             return React.createElement(
                 "div",
-                null,
+                { className: "list" },
                 this.users
             );
         }
@@ -122,10 +124,10 @@ var User = function (_React$Component3) {
             return React.createElement(
                 "div",
                 null,
-                React.createElement("img", { src: this.props.user.avatar_url, style: { maxWidth: '100px' } }),
+                React.createElement("img", { className: "img", src: this.props.user.avatar_url, style: { maxWidth: '100px' } }),
                 React.createElement(
                     "a",
-                    { href: this.props.user.html_url, target: "_blank" },
+                    { className: "link", href: this.props.user.html_url, target: "_blank" },
                     this.props.user.login
                 )
             );

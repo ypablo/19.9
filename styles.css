@@ -1,0 +1,38 @@
+body {
+    background-color: #74b9ff;
+    margin: 1rem;
+}
+.div {
+    display: flex;
+    justify-content: center;   
+}
+.label {
+    font-size: 28px;
+    margin-right: 5px;
+}
+.input {
+    font-size: 28px;
+    margin-left: 5px;
+    border: 2px solid;
+}
+.list {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.list:nth-child(odd){
+    background-color: #0984e3;
+}
+.img{
+    border: 1px solid;
+    margin-right: 5px;
+}
+.link{
+    font-size: 24px;
+    text-decoration: none;
+    color: #fff;
+    bottom: 15px;
+}
+.link:visited {
+    text-decoration: none;  
+}
