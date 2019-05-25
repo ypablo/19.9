@@ -24,7 +24,7 @@ class App extends React.Component {
     render() {
         return (
             <div className="div">
-                <form onSubmit={event => this.onSubmit(event)}>
+                <form className="form" onSubmit={event => this.onSubmit(event)}>
                     <label className="label" htmlFor="searchText">Search by user name</label>
                     <input
                         className="input"
@@ -33,10 +33,8 @@ class App extends React.Component {
                         onChange={event => this.onChangeHandle(event)}
                         value={this.state.searchText} />
                 </form>
-                <p></p>
-
                 <UsersList users={this.state.users} />
-            </div>
+            </div >
         );
     }
 }
@@ -49,7 +47,7 @@ class UsersList extends React.Component {
 
     render() {
         return (
-            <div className="list">
+            <div className="users">
                 {this.users}
             </div>
         );
@@ -59,7 +57,7 @@ class UsersList extends React.Component {
 class User extends React.Component {
     render() {
         return (
-            <div>
+            <div className="list">
                 <img className="img" src={this.props.user.avatar_url} style={{ maxWidth: '100px' }} />
                 <a className="link" href={this.props.user.html_url} target="_blank">{this.props.user.login}</a>
             </div>

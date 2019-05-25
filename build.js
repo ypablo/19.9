@@ -53,7 +53,7 @@ var App = function (_React$Component) {
                 { className: "div" },
                 React.createElement(
                     "form",
-                    { onSubmit: function onSubmit(event) {
+                    { className: "form", onSubmit: function onSubmit(event) {
                             return _this3.onSubmit(event);
                         } },
                     React.createElement(
@@ -70,7 +70,6 @@ var App = function (_React$Component) {
                         },
                         value: this.state.searchText })
                 ),
-                React.createElement("p", null),
                 React.createElement(UsersList, { users: this.state.users })
             );
         }
@@ -93,7 +92,7 @@ var UsersList = function (_React$Component2) {
         value: function render() {
             return React.createElement(
                 "div",
-                { className: "list" },
+                { className: "users" },
                 this.users
             );
         }
@@ -123,7 +122,7 @@ var User = function (_React$Component3) {
         value: function render() {
             return React.createElement(
                 "div",
-                null,
+                { className: "list" },
                 React.createElement("img", { className: "img", src: this.props.user.avatar_url, style: { maxWidth: '100px' } }),
                 React.createElement(
                     "a",
